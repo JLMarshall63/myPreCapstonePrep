@@ -1,0 +1,43 @@
+﻿@*@model IEnumerable<PreCapstoneMCV5B.Models.SamplePlots>*@
+
+@model PreCapstoneMCV5B.ViewModels.AllSample_Components
+@{
+    ViewBag.Title = "SPlot";
+}
+
+<h2>Sample Plot Data</h2>
+<hr />
+
+<h3>Restoration Site: @Model.rSite.RName </h3>
+<h3>County: @Model.rSite.County </h3>
+<h3>State: @Model.rSite.State</h3>
+
+<hr />
+
+
+
+@foreach (var spdata in Model.listSplots)
+{
+    <h4>Sample PlotID: @spdata.SPlotID<br /></h4>
+    <h4>Sample Plot No: @spdata.SPlotNumber<br /></h4>
+    <h4>Sample Date: @spdata.Date<br /></h4>
+    <h4>Layer: @spdata.Layer<br /></h4>
+    <h4>Species: @spdata.Genus @spdata.Species<br /></h4>
+    <h4>Nativity: @spdata.Nativity<br /></h4>
+    <h4>Moisture Index: @spdata.MIndex<br /></h4>
+    <h4>Weed Index: @spdata.WIndex<br /></h4>
+    <h4>Prairie Cohort: @spdata.PrairieCohort<br /></h4>
+    <h4>Focal Species: @spdata.FocalSpecies</h4>
+    <h4>Rare Species: @spdata.RareSpecies<br /></h4>
+    <h4>Substrate: @spdata.Substrate<br /></h4>
+    <h4>Percent Cover: @spdata.PctCover<br /></h4>
+    <h4>Plot Size: @spdata.PlotSize<br /></h4>
+    <h4>GPS Device: @spdata.GPSDevice<br /></h4>
+    <h4>Technician: @spdata.Technician<br /></h4>
+    <h4>Comments: @spdata.Comments<br /></h4>
+    <h4>Latitude: @spdata.Latitude  Longitude: @spdata.Longitude<br /></h4>
+    <h4> LayerID: @spdata.LayerID<br /></h4>
+    <h4>TransectID: @spdata.TransectID<br /></h4>
+    <br /><br />
+}
+

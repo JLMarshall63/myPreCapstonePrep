@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VegStructModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SamplePlot">
+          <Key>
+            <PropertyRef Name="SPlotID" />
+          </Key>
+          <Property Name="SPlotID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SPlotNo" Type="int" />
+          <Property Name="Date" Type="smalldatetime" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Technician" Type="varchar" MaxLength="50" />
+          <Property Name="GPSDevice" Type="varchar" MaxLength="50" />
+          <Property Name="PlotSize" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Layer" Type="varchar" MaxLength="50" />
+          <Property Name="Genus" Type="varchar" MaxLength="50" />
+          <Property Name="Species" Type="varchar" MaxLength="50" />
+          <Property Name="Substrate" Type="varchar" MaxLength="50" />
+          <Property Name="PctCover" Type="float" />
+          <Property Name="HtClass" Type="int" />
+          <Property Name="Nativity" Type="varchar" MaxLength="50" />
+          <Property Name="MIndex" Type="float" />
+          <Property Name="WIndex" Type="float" />
+          <Property Name="PrairieCohort" Type="char" MaxLength="10" />
+          <Property Name="RareSpecies" Type="char" MaxLength="10" />
+          <Property Name="FocalSpecies" Type="nchar" MaxLength="10" />
+          <Property Name="Comments" Type="varchar" MaxLength="150" />
+          <Property Name="LayerID" Type="int" />
+          <Property Name="TransectID" Type="int" />
+        </EntityType>
+        <EntityContainer Name="VegStructModelStoreContainer">
+          <EntitySet Name="SamplePlot" EntityType="Self.SamplePlot" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VegStructModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SamplePlot">
+          <Key>
+            <PropertyRef Name="SPlotID" />
+          </Key>
+          <Property Name="SPlotID" Type="Guid" Nullable="false" />
+          <Property Name="SPlotNo" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Technician" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GPSDevice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PlotSize" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Layer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Genus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Species" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Substrate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PctCover" Type="Double" />
+          <Property Name="HtClass" Type="Int32" />
+          <Property Name="Nativity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MIndex" Type="Double" />
+          <Property Name="WIndex" Type="Double" />
+          <Property Name="PrairieCohort" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="RareSpecies" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FocalSpecies" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="LayerID" Type="Int32" />
+          <Property Name="TransectID" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="VegStructEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SamplePlots" EntityType="Self.SamplePlot" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VegStructModelStoreContainer" CdmEntityContainer="VegStructEntities">
+          <EntitySetMapping Name="SamplePlots">
+            <EntityTypeMapping TypeName="VegStructModel.SamplePlot">
+              <MappingFragment StoreEntitySet="SamplePlot">
+                <ScalarProperty Name="SPlotID" ColumnName="SPlotID" />
+                <ScalarProperty Name="SPlotNo" ColumnName="SPlotNo" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Technician" ColumnName="Technician" />
+                <ScalarProperty Name="GPSDevice" ColumnName="GPSDevice" />
+                <ScalarProperty Name="PlotSize" ColumnName="PlotSize" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
+                <ScalarProperty Name="Genus" ColumnName="Genus" />
+                <ScalarProperty Name="Species" ColumnName="Species" />
+                <ScalarProperty Name="Substrate" ColumnName="Substrate" />
+                <ScalarProperty Name="PctCover" ColumnName="PctCover" />
+                <ScalarProperty Name="HtClass" ColumnName="HtClass" />
+                <ScalarProperty Name="Nativity" ColumnName="Nativity" />
+                <ScalarProperty Name="MIndex" ColumnName="MIndex" />
+                <ScalarProperty Name="WIndex" ColumnName="WIndex" />
+                <ScalarProperty Name="PrairieCohort" ColumnName="PrairieCohort" />
+                <ScalarProperty Name="RareSpecies" ColumnName="RareSpecies" />
+                <ScalarProperty Name="FocalSpecies" ColumnName="FocalSpecies" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="LayerID" ColumnName="LayerID" />
+                <ScalarProperty Name="TransectID" ColumnName="TransectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

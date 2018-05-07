@@ -1,0 +1,200 @@
+﻿@model PreCapstoneMCV5B.Models.SamplePlot
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SamplePlot</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SPlotNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPlotNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Technician)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Technician)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GPSDevice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GPSDevice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlotSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlotSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Layer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Layer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Species)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Species)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Substrate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Substrate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PctCover)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PctCover)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HtClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HtClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nativity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nativity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MIndex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MIndex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WIndex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WIndex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrairieCohort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrairieCohort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RareSpecies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RareSpecies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FocalSpecies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FocalSpecies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LayerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LayerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransectID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransectID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
